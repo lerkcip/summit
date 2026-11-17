@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e1418">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="SUMMIT">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<title>SUMMIT</title>
+<meta name="description" content="SUMMIT: a training hub for rocketry, CNC machining and a space-industry career.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* One visual world: an alpine night. Slate rock, snow text, alpenglow for the next step, glacier ice for information. */
+:root {
+  --night: #0e1418;   /* sky and page */
+  --slate: #151e24;   /* cards */
+  --scarp: #1d2932;   /* raised controls */
+  --ridge: #2a3a45;   /* contour lines and borders */
+  --snow: #e9efe9;    /* text */
+  --scree: #93a5ab;   /* secondary text */
+  --glow: #ff8a5c;    /* alpenglow: the next action, the open trail */
+  --ice: #7fd4e6;     /* glacier: information and links */
+  --moss: #8fcf7a;    /* mastered */
+  --amber: #f2c14e;   /* eroding, fuel */
+  --red: #ef6a6a;     /* wrong, destructive */
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+html { background: #0e1418; }
+#boot { height: 100%; display: grid; place-items: center; color: #93a5ab; font: 600 14px system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+</style>
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app"><div id="boot">Packing for the climb…</div></div>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="js/web.js"></script>
+<script src="data/cur.js"></script>
+<script src="js/phys.js"></script>
+<script src="js/bank1.js"></script>
+<script src="js/bank2.js"></script>
+<script src="js/bank3.js"></script>
+<script src="js/core.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui1.js"></script>
+<script src="js/calc.js"></script>
+<script src="data/unp_index.js"></script>
+<script src="js/unpack.js"></script>
+<script src="js/ask.js"></script>
+<script src="js/ui2.js"></script>
+<script src="js/launch.js"></script>
+<script src="js/hoverpy.js"></script>
+<script src="js/hover.js"></script>
+<script src="js/gcode.js"></script>
+<script src="js/shopdata.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/drills.js"></script>
+<script src="js/career.js"></script>
+<script>
+(function () {
+  function start() { if (window.S && window.S.boot) window.S.boot(); else document.getElementById('boot').textContent = 'SUMMIT could not start. Reload the page.'; }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>
